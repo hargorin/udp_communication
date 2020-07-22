@@ -11,5 +11,5 @@ UDP/IP communication between FPGA and PC
     * Ethernet to SFP adapter
 3. Camera / Display Driver
     * Camera: send images from FPGA to PC
-    * Display: Data or Images from FPGA to PC or vice versa
+    * Display: Data or images from FPGA to PC or vice versa
 
