@@ -4,8 +4,8 @@ import os
 import socket
 
 localIP     = "192.168.178.39"
-localPort   = 58092
-bufferSize  = 1024 
+localPort   = 60611
+bufferSize  = 1024
 
 # msgFromServer       = "Hello UDP Client - Message from Jan"
 # bytesToSend         = str.encode(msgFromServer)
@@ -23,10 +23,9 @@ if __name__ == "__main__":
     parsed_args = arg_parser.parse_args(sys.argv[1:])
     if os.path.isfile(parsed_args.inputFile):
    		print("File exist")
-
-   		f = open(parsed_args.inputFile, "r")
-		print(f.read())
-
+		f = open(parsed_args.inputFile, "r")
+		#print(f.read())
+		data = f.read(bufferSize)
 
 		# Create a datagram socket
 		UDPServerSocket = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM)
@@ -45,6 +44,14 @@ if __name__ == "__main__":
 		    clientIP  = "Client IP Address:{}".format(address) 
 		    print(clientMsg)
 		    print(clientIP)
+		    
+			# Sending data to client
+			data = f.read(bufferSize)
+			while(data):
+				if(UDPServerSocket.sendto(data, address)):
+					print "sending ..."
+					data = f.read(bufferSize)
 
-		    # Sending a reply to client
-		    UDPServerSocket.sendto(bytesToSend, address)
+    	# Close	
+		UDPServerSocket.close()
+		f.close()

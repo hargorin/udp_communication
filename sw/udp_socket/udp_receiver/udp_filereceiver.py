@@ -1,7 +1,7 @@
 import socket
 import sys
 
-serverAddressPort   = ("192.168.178.50", 53352)
+serverAddressPort   = ("192.168.178.39", 60611)
 bufferSize          = 1024 
 
 msgFromClient       = "Hello UDP Server"
