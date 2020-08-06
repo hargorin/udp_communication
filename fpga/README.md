@@ -7,7 +7,7 @@
 │   └── cores                       # Generated cores
 ├── config                          # Board configuration
 ├── cores                           # IP core definitions
-│   ├── led_blinking_v1_0	        # Set up ARTIX-7
+│   ├── led_blinking_v1_0			# Set up ARTIX-7
 ├── projects                        # Projects
 │   ├── udp_comm                    # udp_communication full project
 ├── scripts                         # Used for build process
@@ -30,7 +30,7 @@ make
 make cores      # Build IP cores only
 make project    # Build Project only
 make impl       # Run Synthesis and Implementation only, good for hosts
-                #   without the necessary licenses installed
+				#   without the necessary licenses installed
 make bit        # Run Synthesis, Implementation and generate bitstream
 make flash      # Configure FPGA
 ```
