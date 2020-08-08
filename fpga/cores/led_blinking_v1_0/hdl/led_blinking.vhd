@@ -6,7 +6,7 @@
 -- Author      : Jan Stocker
 -- Company     : CatPV
 -- Created     : Wed Aug  5 19:20:01 2020
--- Last update : Wed Aug  5 20:16:02 2020
+-- Last update : Sat Aug  8 15:39:45 2020
 -- Platform    : xc7a35tcsg325-2L
 -- Standard    : <VHDL-2008 | VHDL-2002 | VHDL-1993 | VHDL-1987>
 --------------------------------------------------------------------------------
@@ -47,7 +47,7 @@ architecture logic of led_blinking is
 
 begin
 	
-	led <= toggle and enable; -- only drives LED when enable
+	 led <= toggle and enable; -- only drives LED when enable
 
 	pulse: process (clk) is
 		variable counter : integer range 0 to C_BLINK := 0;
@@ -55,10 +55,10 @@ begin
 	begin
 		if rising_edge(clk) then
 			if(rst = '1') then
-				toggle <= 0;
+				toggle <= '0';
 				counter := 0;
 			else
-				if (counter = C_BLINK) then
+				if (counter = C_BLINK-1) then
 					toggle <= not toggle;
 					counter := 0;
 				else

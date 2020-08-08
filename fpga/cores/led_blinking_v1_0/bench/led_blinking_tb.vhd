@@ -6,7 +6,7 @@
 -- Author      : Jan Stocker
 -- Company     : CatPV
 -- Created     : Wed Aug  5 19:20:01 2020
--- Last update : Wed Aug  5 20:53:42 2020
+-- Last update : Sat Aug  8 15:58:51 2020
 -- Platform    : xc7a35tcsg325-2L
 -- Standard    : <VHDL-2008 | VHDL-2002 | VHDL-1993 | VHDL-1987>
 --------------------------------------------------------------------------------
@@ -80,7 +80,23 @@ begin
         rst <= '1';
         waitfor(3);
         rst <= '0';
+        
+        enable <= '1';
+        waitfor(6);
+        assert (led = '1') report "LED not high" severity error;	
+        waitfor(5);
+        assert (led = '0') report "LED not low" severity error;
+        waitfor(9);
+        enable <= '0';
+        waitfor(6);
+        assert (led = '0') report "LED not low" severity error;
+        waitfor(4);	
 
+        enable <= '1';
+        waitfor(6);
+        assert (led = '1') report "LED not high" severity error;
+        rst <= '1';
+        waitfor(5);
 
         assert false report "All test successful" severity note;
         stop_sim <= '1';

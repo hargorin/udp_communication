@@ -1,0 +1,27 @@
+[*]
+[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
+[*] Sat Aug  8 13:59:15 2020
+[*]
+[dumpfile] "/home/jan/git/udp_communication/fpga/build/ghdl/led_blinking_tb.ghw"
+[dumpfile_mtime] "Sat Aug  8 13:59:08 2020"
+[dumpfile_size] 1155
+[savefile] "/home/jan/git/udp_communication/fpga/simulation/led_blinking.gtkw"
+[timestart] 0
+[size] 2874 1140
+[pos] -1 -1
+*-25.000000 63200000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.led_blinking_tb.
+[sst_width] 297
+[signals_width] 194
+[sst_expanded] 1
+[sst_vpaned_height] 322
+@28
+top.led_blinking_tb.dut.clk
+top.led_blinking_tb.dut.rst
+top.led_blinking_tb.dut.enable
+top.led_blinking_tb.dut.toggle
+@29
+top.led_blinking_tb.dut.led
+[pattern_trace] 1
+[pattern_trace] 0
