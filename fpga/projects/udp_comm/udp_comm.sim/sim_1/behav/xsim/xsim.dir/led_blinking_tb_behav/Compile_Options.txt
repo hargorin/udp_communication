@@ -1,0 +1,1 @@
+-wto "0ca32bcf6d5645ebbaeb80e20f21d0c3" --incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "secureip" --snapshot "led_blinking_tb_behav" "xil_defaultlib.led_blinking_tb" -log "elaborate.log" 
