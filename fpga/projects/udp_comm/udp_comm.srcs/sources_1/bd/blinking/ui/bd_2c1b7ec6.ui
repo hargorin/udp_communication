@@ -1,0 +1,29 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.37911",
+   "Default View_TopLeft":"-339,-502",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.21  2019-05-29 bk=1.5064 VDI=41 GEI=36 GUI=JA:9.0 TLS
+#  -string -flagsOSRD
+preplace port rst_n -pg 1 -lvl 0 -x -240 -y -70 -defaultsOSRD
+preplace port clk_sys -pg 1 -lvl 0 -x -240 -y -50 -defaultsOSRD
+preplace portBus led_fpga_red -pg 1 -lvl 3 -x 650 -y -50 -defaultsOSRD
+preplace portBus led_bb_red -pg 1 -lvl 3 -x 650 -y 70 -defaultsOSRD
+preplace inst led_blinking_0 -pg 1 -lvl 2 -x 530 -y -50 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 240 -y -60 -defaultsOSRD
+preplace inst const_high -pg 1 -lvl 1 -x 240 -y 70 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 1 -x 240 -y -290 -defaultsOSRD
+preplace netloc clk_in1_0_1 1 0 1 N -50
+preplace netloc led_blinking_0_led 1 2 1 N -50
+preplace netloc const_high_dout 1 1 2 430J 70 N
+preplace netloc rst_n_1 1 0 1 -220 -310n
+preplace netloc clk_wiz_0_clk_out1 1 0 2 -210 10 420
+preplace netloc proc_sys_reset_0_mb_reset 1 1 1 430 -330n
+levelinfo -pg 1 -240 240 530 650
+pagesize -pg 1 -db -bbox -sgen -340 -570 830 230
+"
+}
+{
+   "da_board_cnt":"2",
+   "da_clkrst_cnt":"1"
+}
