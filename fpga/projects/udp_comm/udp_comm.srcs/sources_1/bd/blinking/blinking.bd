@@ -12,7 +12,8 @@
       "led_blinking_0": "",
       "clk_wiz_0": "",
       "const_high": "",
-      "proc_sys_reset_0": ""
+      "proc_sys_reset_0": "",
+      "ila_0": ""
     },
     "ports": {
       "rst_n": {
@@ -150,19 +151,42 @@
       "proc_sys_reset_0": {
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
         "xci_name": "blinking_proc_sys_reset_0_0"
+      },
+      "ila_0": {
+        "vlnv": "xilinx.com:ip:ila:6.2",
+        "xci_name": "blinking_ila_0_0",
+        "parameters": {
+          "C_ADV_TRIGGER": {
+            "value": "true"
+          },
+          "C_DATA_DEPTH": {
+            "value": "65536"
+          },
+          "C_ENABLE_ILA_AXI_MON": {
+            "value": "false"
+          },
+          "C_MONITOR_TYPE": {
+            "value": "Native"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "3"
+          }
+        }
       }
     },
     "nets": {
       "clk_in1_0_1": {
         "ports": [
           "clk_sys",
-          "clk_wiz_0/clk_in1"
+          "clk_wiz_0/clk_in1",
+          "ila_0/probe1"
         ]
       },
       "led_blinking_0_led": {
         "ports": [
           "led_blinking_0/led",
-          "led_fpga_red"
+          "led_fpga_red",
+          "ila_0/probe2"
         ]
       },
       "const_high_dout": {
@@ -176,20 +200,22 @@
         "ports": [
           "rst_n",
           "proc_sys_reset_0/ext_reset_in",
-          "clk_wiz_0/reset"
-        ]
-      },
-      "clk_wiz_0_clk_out1": {
-        "ports": [
-          "clk_wiz_0/clk_out1",
-          "proc_sys_reset_0/slowest_sync_clk",
-          "led_blinking_0/clk"
+          "clk_wiz_0/reset",
+          "ila_0/probe0"
         ]
       },
       "proc_sys_reset_0_mb_reset": {
         "ports": [
           "proc_sys_reset_0/mb_reset",
           "led_blinking_0/rst"
+        ]
+      },
+      "Net": {
+        "ports": [
+          "clk_wiz_0/clk_out1",
+          "ila_0/clk",
+          "led_blinking_0/clk",
+          "proc_sys_reset_0/slowest_sync_clk"
         ]
       }
     }

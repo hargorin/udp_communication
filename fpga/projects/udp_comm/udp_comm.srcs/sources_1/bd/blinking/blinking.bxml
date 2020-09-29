@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="39">
   <CompositeFile CompositeFileTopName="blinking" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1600446145"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1600446145"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1600446145"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1600446145"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1601368599"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1601368599"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1601368599"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1601368599"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip/blinking_led_blinking_0_0/blinking_led_blinking_0_0.xci" Type="IP">
         <Instance HierarchyPath="led_blinking_0"/>
@@ -43,6 +43,14 @@
       </File>
       <File Name="ip/blinking_proc_sys_reset_0_0/blinking_proc_sys_reset_0_0.xci" Type="IP">
         <Instance HierarchyPath="proc_sys_reset_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/blinking_ila_0_0/blinking_ila_0_0.xci" Type="IP">
+        <Instance HierarchyPath="ila_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

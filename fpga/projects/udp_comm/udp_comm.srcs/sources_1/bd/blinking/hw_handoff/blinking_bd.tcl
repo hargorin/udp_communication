@@ -189,6 +189,16 @@ proc create_root_design { parentCell } {
   # Create instance: const_high, and set properties
   set const_high [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 const_high ]
 
+  # Create instance: ila_0, and set properties
+  set ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_0 ]
+  set_property -dict [ list \
+   CONFIG.C_ADV_TRIGGER {true} \
+   CONFIG.C_DATA_DEPTH {65536} \
+   CONFIG.C_ENABLE_ILA_AXI_MON {false} \
+   CONFIG.C_MONITOR_TYPE {Native} \
+   CONFIG.C_NUM_OF_PROBES {3} \
+ ] $ila_0
+
   # Create instance: led_blinking_0, and set properties
   set block_name led_blinking
   set block_cell_name led_blinking_0
@@ -204,12 +214,12 @@ proc create_root_design { parentCell } {
   set proc_sys_reset_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 proc_sys_reset_0 ]
 
   # Create port connections
-  connect_bd_net -net clk_in1_0_1 [get_bd_ports clk_sys] [get_bd_pins clk_wiz_0/clk_in1]
-  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins led_blinking_0/clk] [get_bd_pins proc_sys_reset_0/slowest_sync_clk]
+  connect_bd_net -net Net [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins ila_0/clk] [get_bd_pins led_blinking_0/clk] [get_bd_pins proc_sys_reset_0/slowest_sync_clk]
+  connect_bd_net -net clk_in1_0_1 [get_bd_ports clk_sys] [get_bd_pins clk_wiz_0/clk_in1] [get_bd_pins ila_0/probe1]
   connect_bd_net -net const_high_dout [get_bd_ports led_bb_red] [get_bd_pins const_high/dout] [get_bd_pins led_blinking_0/enable]
-  connect_bd_net -net led_blinking_0_led [get_bd_ports led_fpga_red] [get_bd_pins led_blinking_0/led]
+  connect_bd_net -net led_blinking_0_led [get_bd_ports led_fpga_red] [get_bd_pins ila_0/probe2] [get_bd_pins led_blinking_0/led]
   connect_bd_net -net proc_sys_reset_0_mb_reset [get_bd_pins led_blinking_0/rst] [get_bd_pins proc_sys_reset_0/mb_reset]
-  connect_bd_net -net rst_n_1 [get_bd_ports rst_n] [get_bd_pins clk_wiz_0/reset] [get_bd_pins proc_sys_reset_0/ext_reset_in]
+  connect_bd_net -net rst_n_1 [get_bd_ports rst_n] [get_bd_pins clk_wiz_0/reset] [get_bd_pins ila_0/probe0] [get_bd_pins proc_sys_reset_0/ext_reset_in]
 
   # Create address segments
 

@@ -18,4 +18,7 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==blinking_xlcons
 # IP: bd/blinking/ip/blinking_proc_sys_reset_0_0/blinking_proc_sys_reset_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==blinking_proc_sys_reset_0_0 || ORIG_REF_NAME==blinking_proc_sys_reset_0_0} -quiet] -quiet
 
+# IP: bd/blinking/ip/blinking_ila_0_0/blinking_ila_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==blinking_ila_0_0 || ORIG_REF_NAME==blinking_ila_0_0} -quiet] -quiet
+
 # XDC: bd/blinking/blinking_ooc.xdc

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcsg325-2L" LaunchTime="1600446151">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcsg325-2L" LaunchTime="1601375906">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="BITSTR-SYSDEF" Name="blinking_wrapper.sysdef"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
@@ -139,6 +139,7 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="blinking_ila_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="blinking_clk_wiz_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="blinking_led_blinking_0_0"/>
 </GenRun>

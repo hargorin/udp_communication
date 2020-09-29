@@ -2,8 +2,8 @@
 # Vivado v2019.2.1 (64-bit)
 # SW Build 2729669 on Thu Dec  5 04:48:12 MST 2019
 # IP Build 2729494 on Thu Dec  5 07:38:25 MST 2019
-# Start of session at: Fri Sep 18 18:22:35 2020
-# Process ID: 25219
+# Start of session at: Tue Sep 29 12:34:38 2020
+# Process ID: 21735
 # Current directory: /home/jan/git/udp_communication/fpga/projects/udp_comm/udp_comm.runs/synth_1
 # Command line: vivado -log blinking_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source blinking_wrapper.tcl
 # Log file: /home/jan/git/udp_communication/fpga/projects/udp_comm/udp_comm.runs/synth_1/blinking_wrapper.vds

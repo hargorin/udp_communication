@@ -1,7 +1,7 @@
 --Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2019.2.1 (lin64) Build 2729669 Thu Dec  5 04:48:12 MST 2019
---Date        : Fri Sep 18 18:22:24 2020
+--Date        : Tue Sep 29 10:36:36 2020
 --Host        : hargorin running 64-bit Ubuntu 20.04.1 LTS
 --Command     : generate_target blinking_wrapper.bd
 --Design      : blinking_wrapper
