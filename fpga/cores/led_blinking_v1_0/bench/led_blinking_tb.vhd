@@ -6,7 +6,7 @@
 -- Author      : Jan Stocker
 -- Company     : CatPV
 -- Created     : Wed Aug  5 19:20:01 2020
--- Last update : Sat Aug  8 15:58:51 2020
+-- Last update : Tue Sep 29 13:53:05 2020
 -- Platform    : xc7a35tcsg325-2L
 -- Standard    : <VHDL-2008 | VHDL-2002 | VHDL-1993 | VHDL-1987>
 --------------------------------------------------------------------------------
@@ -37,7 +37,7 @@ end entity led_blinking_tb;
 architecture testbench of led_blinking_tb is
 
 	-- Testbench DUT generics
-	constant C_BLINK : INTEGER := 5;
+	constant C_BLINK_FRQ : INTEGER := 5;
 
 	-- Testbench DUT ports
 	signal clk    : std_logic;
@@ -107,6 +107,7 @@ begin
 	-----------------------------------------------------------
 	DUT : entity work.led_blinking
 		generic map (
+			C_BLINK_FRQ => C_BLINK_FRQ,
 			C_BLINK => C_BLINK
 		)
 		port map (

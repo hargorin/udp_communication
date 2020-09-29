@@ -6,13 +6,13 @@
 -- Author      : Jan Stocker
 -- Company     : CatPV
 -- Created     : Wed Aug  5 19:20:01 2020
--- Last update : Sat Aug  8 15:39:45 2020
+-- Last update : Tue Sep 29 13:53:19 2020
 -- Platform    : xc7a35tcsg325-2L
 -- Standard    : <VHDL-2008 | VHDL-2002 | VHDL-1993 | VHDL-1987>
 --------------------------------------------------------------------------------
 -- Copyright (c) 2020 CatPV
 -------------------------------------------------------------------------------
--- Description: LED flashes with a frequency of clk / C_COUNTER * 0.5
+-- Description: LED flashes with a frequency of C_BLINK_FRQ
 --------------------------------------------------------------------------------
 -- Revisions:  Revisions and documentation are controlled by
 -- the revision control system (RCS).  The RCS should be consulted
@@ -26,9 +26,9 @@ use ieee.std_logic_unsigned.all;
 
 entity led_blinking is
 	generic (
-		-- clk / C_COUNTER * Duty Cycle = Blinking Frequency 
-		-- (125MHz / 15625000 * 0.5 = 4Hz)
-		C_BLINK	: INTEGER := 15625000 
+		-- clk / C_BLINK * Duty Cycle = Blinking Frequency 
+		C_BLINK_FRQ : INTEGER := 4; -- Hz
+		C_BLINK		: INTEGER := (125000000 / C_BLINK_FRQ / 2)
 
 	);
 	port (

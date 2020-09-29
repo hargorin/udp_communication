@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7a35tcsg325-2L" LaunchTime="1601375675">
-  <File Type="VDS-TIMING-PB" Name="blinking_wrapper_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="blinking_wrapper_timing_summary_synth.rpt"/>
+  <File Type="PA-TCL" Name="blinking_wrapper.tcl"/>
+  <File Type="REPORTS-TCL" Name="blinking_wrapper_reports.tcl"/>
+  <File Type="RDS-RDS" Name="blinking_wrapper.vds"/>
   <File Type="RDS-DCP" Name="blinking_wrapper.dcp"/>
   <File Type="RDS-UTIL-PB" Name="blinking_wrapper_utilization_synth.pb"/>
   <File Type="RDS-UTIL" Name="blinking_wrapper_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="blinking_wrapper_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="blinking_wrapper.vds"/>
-  <File Type="REPORTS-TCL" Name="blinking_wrapper_reports.tcl"/>
-  <File Type="PA-TCL" Name="blinking_wrapper.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../../cores/led_blinking_v1_0/hdl/led_blinking.vhd">
@@ -65,7 +62,7 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="blinking_led_blinking_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="blinking_ila_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="blinking_clk_wiz_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="blinking_led_blinking_0_0"/>
 </GenRun>
