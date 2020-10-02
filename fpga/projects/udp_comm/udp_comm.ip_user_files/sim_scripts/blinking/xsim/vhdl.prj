@@ -1,5 +1,0 @@
-vhdl xil_defaultlib  \
-"../../../bd/blinking/ip/blinking_led_blinking_0_0/sim/blinking_led_blinking_0_0.vhd" \
-"../../../bd/blinking/sim/blinking.vhd" \
-
-nosort

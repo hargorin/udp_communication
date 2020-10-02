@@ -6,7 +6,7 @@
 -- Author      : Jan Stocker
 -- Company     : CatPV
 -- Created     : Wed Aug  5 19:20:01 2020
--- Last update : Tue Sep 29 13:53:19 2020
+-- Last update : Fri Oct  2 15:56:11 2020
 -- Platform    : xc7a35tcsg325-2L
 -- Standard    : <VHDL-2008 | VHDL-2002 | VHDL-1993 | VHDL-1987>
 --------------------------------------------------------------------------------
@@ -27,9 +27,7 @@ use ieee.std_logic_unsigned.all;
 entity led_blinking is
 	generic (
 		-- clk / C_BLINK * Duty Cycle = Blinking Frequency 
-		C_BLINK_FRQ : INTEGER := 4; -- Hz
-		C_BLINK		: INTEGER := (125000000 / C_BLINK_FRQ / 2)
-
+		C_BLINK_FRQ : INTEGER := 4 -- Hz
 	);
 	port (
 		clk 		: IN  std_logic;
@@ -43,7 +41,8 @@ end entity led_blinking;
 
 architecture logic of led_blinking is
 	-- toggles the LED
-	signal toggle : std_logic := '0'; 
+	signal toggle 		: std_logic := '0';
+	constant C_BLINK 	: INTEGER := (125000000 / C_BLINK_FRQ / 2); 
 
 begin
 	

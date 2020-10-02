@@ -1,7 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../../../cores/led_blinking_v1_0/hdl/led_blinking.vhd" \
-"../../../../../../cores/led_blinking_v1_0/bench/led_blinking_tb.vhd" \
-
-# Do not sort compile order
-nosort

@@ -26,8 +26,6 @@ create_project -part $part_name $project_name $build_location -force
 
 # Link to IPs
 set_property IP_REPO_PATHS "$ip_location/" [current_project]
-
-set_property ip_repo_paths "$curr_path/" [current_project]
 update_ip_catalog
 
 # Project settings
