@@ -9,7 +9,7 @@
 ├── cores                           # IP core definitions
 │   ├── led_blinking_v1_0			# Set up ARTIX-7
 ├── projects                        # Projects
-│   ├── udp_comm                    # udp_communication full project
+│   ├── blinky                    	# initial project for set up the FPGA
 ├── scripts                         # Used for build process
 ├── simulation                      # Simulation ressources
 ├── src
