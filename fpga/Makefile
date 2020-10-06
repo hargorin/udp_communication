@@ -133,4 +133,5 @@ clean-sim:
 # 
 clean:
 	$(RM) $(BUILD)
-	$(RM) vivado*.jou vivado*.log .Xil
+	$(RM) vivado*.jou vivado*.log webtalk.jou webtalk.log .Xil
+	$(RM) ../vivado*.jou ../vivado*.log
