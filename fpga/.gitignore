@@ -1,0 +1,10 @@
+# ignore the output directory
+build/
+.Xil/
+
+*.log
+*.jou
+*.str
+*.debug
+*.btree
+*.zip
