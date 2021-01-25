@@ -10,7 +10,7 @@
 
 
 # Project name
-NAME = blinky
+NAME = udp_comm
 # FPGA Part number
 PART = xc7a35tcsg325-2L
 
@@ -133,4 +133,5 @@ clean-sim:
 # 
 clean:
 	$(RM) $(BUILD)
-	$(RM) vivado*.jou vivado*.log .Xil
+	$(RM) vivado*.jou vivado*.log webtalk.jou webtalk.log .Xil
+	$(RM) ../vivado*.jou ../vivado*.log
